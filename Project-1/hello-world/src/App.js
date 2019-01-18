@@ -1,30 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Header from './Header';
-import Intro from './Intro';
-
-
 
 class App extends Component {
   render() {
     return (
-
       <div className="App">
-        <Header />
-        <p> Hey </p>
-        <Intro />
-
+        <header className="App-header">
+          <img src="https://msupodcastcom.files.wordpress.com/2018/08/main-logo-2.png?w=700&h=&crop=1" alt="logo" />
+          <p>
+           Come listen to my podcast.
+          </p>
+          <a
+            className="App-link"
+            href="https://msu-podcast.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           Modern Shakespeare Uncensored
+          </a>
+        </header>
       </div>
     );
   }
 }
-
-
-
-
-
-
-
 
 export default App;
