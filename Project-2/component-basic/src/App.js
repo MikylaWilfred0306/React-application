@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+function timeTick(){
+  const element = (
+    <div> 
+      <h1>The Time is</h1>
+      <h2>time: {new Date().toLocaleTimeString} </h2>
+    </div>
+  );
+}
 
 class App extends Component {
 
