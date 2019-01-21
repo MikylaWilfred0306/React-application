@@ -1,28 +1,52 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Parent></Parent>
       </div>
     );
   }
 }
+
+
+class Parent extends Component 
+  {
+    render(){
+      return(
+      <div> 
+        <h1>PARENT</h1> 
+        <Cars msg="Like Tomater but without the Tow." model="8675309" coolcars={this.props.cars.join(', ')}/>
+        <Cars msg="LIFE IS A HIGHWAY" model="66" />
+      </div>);
+    }
+  }
+
+  Parent.defaultProps = {
+    cars:['BMW', "MERC", 'VW']
+  }
+
+class Cars extends Component {
+  render(){
+    return(
+    <div>
+    <h2>I am Lightning Mcqueen</h2>  
+    <p>{this.props.msg}</p>
+    <p>Model Number: {this.props.model}</p>
+    <p>{this.props.coolcars}</p>
+    </div>
+    );
+  }
+}
+
+
+
+
+
 
 export default App;
