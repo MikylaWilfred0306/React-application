@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +15,23 @@ class App extends Component {
   }
 }
 
+
+App.propTypes = {
+  propObject: PropTypes.object, 
+  propString: PropTypes.string ,
+  propNum: PropTypes.number
+
+}
+
+App.defaultProps = {
+  propNum: 3,
+  propString: "Anything",
+  propObject:{
+    obj1: "Obj1",
+    obj2: "Obj2",
+    obj3: "Obj3"
+  }
+}
 
 class Parent extends Component 
   {
