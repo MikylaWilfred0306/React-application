@@ -9,6 +9,11 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
+          <h3>{this.props.propNum}</h3>
+          <h3>{this.props.propString}</h3>
+          <h3>{this.props.propObject.obj1}</h3>
+          <h3>{this.props.propObject.obj2}</h3>
+          <h3>{this.props.propObject.obj3}</h3>
         <Parent></Parent>
       </div>
     );
