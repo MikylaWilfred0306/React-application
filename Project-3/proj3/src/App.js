@@ -44,7 +44,13 @@ class Parent extends Component
       return(
       <div> 
         <h1>PARENT</h1> 
-        <Cars msg="Like Tomater but without the Tow." model="8675309" coolcars={this.props.cars.join(', ')}/>
+        <Cars msg="Like Tomater but without the Tow." model="8675309" coolcars={this.props.cars}/>
+
+        <div>{this.props.cars.map((item, i) => {
+            return <p key={i}>{item}</p> ;
+          })}</div>
+
+
         <Cars msg="LIFE IS A HIGHWAY" model="66" />
       </div>);
     }
@@ -62,7 +68,11 @@ class Cars extends Component {
     <p>{this.props.msg}</p>
     <p>Model Number: {this.props.model}</p>
     <p>{this.props.coolcars}</p>
+
+
+          
     </div>
+    
     );
   }
 }
